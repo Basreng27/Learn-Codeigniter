@@ -1,0 +1,64 @@
+//Konfig Awal
+//Konfigurasi di "config/autoload.php"
+//Library Database
+	//asal
+	$autoload['libraries'] = array();
+	//sesudah
+	$autoload['libraries'] = array('database');
+	
+	//isi username dan password database di "config/database.php"
+	'username' => 'root',
+	'password' => '',
+	'database' => '<nm database>';
+
+//Library URL -> Memanggil url utama
+	//asal
+	$autoload['helper'] = array();
+	//sesudah
+	$autoload['helper'] = array('url');
+
+//Konfigurasi di "config/config.php"
+//Link utama server / Base URL
+	//asal
+	$config['base_url'] = '<alamat url>'; //jika sudah punya hosting diisi alamat hosting 
+	//sesudah
+	$config['base_url'] = ' ';
+
+//Ganti config index
+	//asal
+	$config['index_page'] = 'index.php';
+	//sesudah
+	$config['index_page'] = '';
+	
+	-lalu buat file di dalam folder 'project yang di buat' bernama ".htaccess" Lalu isi dengan
+
+		<IfModule authz_core_module>
+    		Require all denied
+		</IfModule>
+		<IfModule !authz_core_module>
+    		Deny from all
+		</IfModule>
+
+//Langkah selanjutnya
+	- ubah file yang ada di view dari "welcome_message.php" menjadi "home.php"
+	- masuk folder controler dan ubah controlernya menjadi nama file baru tadi dan ganti isi dari viewnya
+	- ubah isi di file "config/routes.php" 
+		//awal
+		$route['default_controller'] = 'welcome'; //default controller
+		//sesudah
+ $route['default_controller'] = 'home'; //sesuai nama dari controller
+
+//Struktur Controller
+	<?php
+	defined('BASEPATH') or exit('No direct script access allowed');
+	
+	//nama class diawali dengan huruf besar
+	class Home extends CI_Controller
+	{
+		//pembuatan funtion
+		public function index()
+		{
+			//syintax load file di folder view
+			$this->load->view('home');
+		}
+	}

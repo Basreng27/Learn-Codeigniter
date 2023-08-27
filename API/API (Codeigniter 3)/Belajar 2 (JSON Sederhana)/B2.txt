@@ -1,0 +1,127 @@
+//JSON Sederhana
+//jika ingin menyimpan 2 object harus dimasukan ke dalam array
+[
+    { 
+        "nim" : "1218022",
+        "nama" : "Rayandra Wandi Marselana",
+        "umur" : 21,
+        "pekerjaan" : "Mahasiswa",
+        "lulus" : true,
+        "hobby" : [
+            "coding", 
+            "nonton", 
+            "sejarah"
+        ],
+        "pembimbing " : {
+            "pembimbing1" : "Rini",
+            "pembimbing2" : "Siti"
+        }  
+    },
+    { 
+        "nim" : "1218022",
+        "nama" : "Rayandra Wandi Marselana",
+        "umur" : 21,
+        "pekerjaan" : "Mahasiswa",
+        "lulus" : true,
+        "hobby" : [
+            "coding", 
+            "nonton", 
+            "sejarah"
+        ],
+        "pembimbing " : {
+            "pembimbing1" : "Rini",
+            "pembimbing2" : "Siti"
+        }  
+    }
+]
+//cara buka bisa diweb browser sama seperti php //bisa download JSONview diextensions
+//jarang membuat JSON sendiri(manual) biasanya JSON di generate dari aplikasi kita baik dari object atau array dan di ubah jadi json
+//atau kebalikannya dengan mengambil json dari orang lain
+
+//bekerja dengan JSON
+	//PHP
+		//json_endcode() //mengubah array atau obeject yang dimiliki menjadi JSON supaya bisa diakses orang
+			$data = [
+				"a" => 1,
+				"b" => 2,
+				"c" => 3
+			];
+			
+			echo json_endcode($data);
+			
+			//hasil
+			{
+				"a":1,
+				"b":2,
+				"c":3
+			} //diparshing atau di ubah formatnya
+			
+		//json_decode() //mengambil JSON dan di ubah menjadi array agar mudah dimanipulasi
+			//ambil data JSON dari file
+			$contents = file_get_contents('data.json');
+			//ubah standar encoding atau formatnya
+			$contents = utf8_encode($contents)
+			//ubah string json menjadi array associative
+			$result = json_endcode
+			
+		//mengakses file JSON dari tempat lain
+			//file_get_contents()
+		
+	//Javascript
+		//JSON.stringify()//mengubah array atau obeject yang dimiliki menjadi JSON supaya bisa diakses orang
+			$data = [
+				"a" => 1,
+				"b" => 2,
+				"c" => 3
+			];
+			
+			console.log(JSON.stringify($data));
+			
+			//hasil
+			{
+				"a":1,
+				"b":2,
+				"c":3
+			} //diparshing atau di ubah formatnya
+		
+		//JSON.parse()//mengambil JSON dan di ubah menjadi array agar mudah dimanipulasi
+			var chr = new XMLHttpRequest();
+			xhr.onreadystatechange = function(){
+				if(xhr.readyState === 4 && xhr.status === 200){
+					var data = JSON.parse(this.responseText);
+					console.log($data);
+				}
+			}
+		
+			xhr.open('Get', 'data.json', true);
+			xhr.send(); 
+		//Mengakses JSON
+			//ajax //javascript murni
+				//XMLHttpRequest
+				//JQuery
+				
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		

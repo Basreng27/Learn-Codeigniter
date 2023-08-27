@@ -1,0 +1,37 @@
+[
+    {
+        "jenis" : "Makanan",
+        "jenis_makanan" : {
+            "ayam" : { 
+                "nama1" : "Ayam goreng",
+                "harga1" : 10000,
+                "nama2" : "Ayam Geprek",
+                "harga2" : 15000
+            },
+            "nasi" : {
+                "nama1" : "Nasi Rames",
+                "harga1" : 15000,
+                "nama2" : "Nasi Uduk",
+                "harga2" : 20000
+            }
+        },
+        "bungkus" : true
+    },{
+        "jenis" : "Minuman",
+        "jenis_minuman" : {
+            "teh" : { 
+                "nama1" : "Teh Manis",
+                "harga1" : 7000,
+                "nama2" : "Teh Tawar",
+                "harga2" : 10000
+            },
+            "jus" : {
+                "nama1" : "Alpukat",
+                "harga1" : 13000,
+                "nama2" : "Jeruk",
+                "harga2" : 11000
+            }
+        },
+        "bungkus" : true
+    }
+]

@@ -1,0 +1,13 @@
+//JSON di luar domain
+	//same-origin policy => kebijakan mengakses document dari tempat di luat domain
+		//menyebabkan tidak dapan mengakses data (.json) dari luar domain website
+		//tidak bisa sembarangan ambil data
+	
+	//caranya dengan melakukan configurasi CORS (Cross Origin Resource Sharing)
+		//mekanisme yang membuat kita dapat mengakses sebuah resource (data) dari luar domain
+		//caranya dengan membuat server memperbolehkan adanya akses data dari luar domain
+		//dengan memodifikasi Access-Control-Allow-Origin 
+		//biasanya membuat dengan file .htaccess dan tambahkan script
+			<ifModule mod_headers.c>
+				Header set Access-Control-Allow-Origin "*"
+			</ifModule>

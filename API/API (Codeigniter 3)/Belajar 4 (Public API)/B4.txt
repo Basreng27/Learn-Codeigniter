@@ -1,0 +1,34 @@
+//Public API atau Open API
+	//website API
+		//https://any-api.com/ //melihat API apa saja yang tersedia
+		//https://github.com/toddmotto/public-apis 
+		//https://github.com/farizdotid //khusu API di Indonesi
+		
+	//Otentikasi (Auth)
+		//tidak semua API bebas digunakan
+		//API tanpa otentikasi
+		//Key/Token //id batas penggunaan API
+		//OAuth //login seperti facebook, google dll
+		
+		//sebelum memakai API terlebih dahulu tentukan menggunakan Auth yang mana
+		//rajin baca dokumentasi milik API
+		
+		//CORS
+		
+//mengunakan apilikasi POSTMAN
+	
+	
+//langkah mengambil API
+	//cari API yang dituju, misal "omdbapi.com"
+	//dapatkan API key nya dulu (API terbatas 1 hari 1000x akses ke API nya)
+	//cari navbar atau apapun yang berkaitan dengan API key
+	//lalu isi data dirinya untuk mendapatkan API
+	//buka email dan verifikasi lalu tunggu hingga API active "your key is now activated"
+	//"8ad78ccf" API Key/Token
+	//buka postman
+	//pilih request method lalu di tulisan get bisa di klik dan di cari <belajar api unpas sandika galih ke5>
+	//masukan link yang di tentukan dan parameternya
+	//lalu send 
+	//jika benar datanya akan keluar dengan format array (biasa berbentuk json)
+	
+	//lalu cari cara penggunaan singkat API nya

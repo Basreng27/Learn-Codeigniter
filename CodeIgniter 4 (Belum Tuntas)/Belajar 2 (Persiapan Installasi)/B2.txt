@@ -1,0 +1,28 @@
+link : https://www.youtube.com/watch?v=UhpzEne6omo&list=PLFIM0718LjIUkkIq1Ub6B5dYNb6IlMvtc&index=3
+
+software requirement :	xampp
+						visual studoio code
+							extention :	intelephense
+										prettier
+										snippet
+						composer
+						git bash
+						
+Membuat Snippet/untuk pemanggilan sytax
+bisa di buka di html dan php
+{
+	"PHP Tag":{ //nama
+		"prefix": "php", //inisialisasi
+		"body": "<?php $1 ?>" //isinya
+	},
+	"Inline Echo":{
+		"prefix": "phpe",
+		"body": "<?= $$1; ?>"
+	}
+}
+
+install codeignitor 4 di dalam local server seperti laragon dan xampp
+	masuk kedalam cmd atau git bash dan ketik : composer create-project codeigniter4/appstarter aplikasi-belajar-ci4 --no-dev //untuk menginstall ci4 tanpa unitest
+	untuk menjalankan ci4 tanpa menggunakan server seperti laragon / xampp :
+		masuk ke dalam folder yang dibuat tadi dengan perihtah "cd aplikasi-belajar-ci4"
+			lalu ketikan "php spark serve" //tidak boleh di close terminalnya

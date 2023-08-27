@@ -1,0 +1,5 @@
+link : https://www.youtube.com/watch?v=O9PZgYjJ6ik&list=PLJ_2_JcZ_v8ZoSePsWiWfEDQIDhX92m4A&index=9
+tonton vidio di atas untuk lebih comlpete
+
+menggunakan library Guzzle : https://docs.guzzlephp.org/
+dan harus sudah install composer

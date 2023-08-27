@@ -1,0 +1,31 @@
+link : https://www.youtube.com/watch?v=kfVCKMR5LTI
+
+- rename atau duplicate file env menjadi .env
+- ubah environtmentnya menjadi development
+- configurasi databasenya
+- buat file migration untuk databasenya di app\database\migration\<buat nama dbnya dengan format tahunbulanharijammenitdetik_<namaTabel>>
+- buat struktur tabelnya di dalam file yang sudah dibuat
+- setelah dibuat run diterminal dengan perintah 'php spark migrate'
+
+- menambahkan route di app\Config\Routes.php
+    = '$routes->resource('<namaTabel>');'
+- buat Model <NamaModel>
+- buat Entity <NamaEntity>
+    = tidak disediakan folder entity maka dibuat saja folder entity dengan isinya nama tabel 
+- buat Controller <NamaController>
+
+- buat api untuk menampilkan semua data. buat di Controller
+- buat api untuk create data. buat di Controller (menggunakan post)
+    = buat validasi dulu
+        -= ada di app\config\validation.php (line 45 kebawah)
+    = buat method created di controller
+- buat api untuk update. dibuat di Controller (menggunakan put)
+    = buat validasi dulu
+        -= ada di app\config\validation.php (line 85 kebawah)
+    = buat method update di controller
+-buat api untuk delete. dibuat di Controller (menggunakan delete)
+    = buat method <namaMethod> di model
+    = buat method delete di controller
+-buat api untuk show / find by id. dibuat di Controller (menggunakan show)
+    = buat method <namaMethod> di model
+    = buat method show di controller

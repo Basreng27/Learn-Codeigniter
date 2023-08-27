@@ -1,0 +1,11 @@
+//untuk conect pada API
+	//API Client
+		//PHP
+			//file_get_contens() //mengambil API atau conect
+			//cURL
+		//ajax
+	
+//API Goggle
+	https://developers.google.com
+//API Instagram
+	https://instagram.com/developer //hanya untuk instagram sendiri  

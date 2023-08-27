@@ -1,0 +1,27 @@
+link : https://www.youtube.com/watch?v=uiOHCqiLzk0&list=PLFIM0718LjIUkkIq1Ub6B5dYNb6IlMvtc&index=4
+
+penjelasan struktur folder (Tanpa menambahkan unitest)(folder/file yang penting saja):
+	folder :
+		app 					//folder inti dari codeigniter
+			Config				//configurasi aplikasinya
+				Database.php 	//untuk config database
+				Routes.php 		//mengatur jalur akses
+			Controllers			//menyimpan controller
+			Models				//menyimpan model
+			Views				//untuk viewnya
+		public 					//tempat mrnyimpan asset / folder yang dimodifikasi //bisa menyimpan folder gambar, css, js dan semua assets
+			.htaccess 			//membersihkan url tanpa nama file
+			favicon.ico 		//membuat icon
+			index.php	 		//file yang akan membawa dile lainnya //patikan tidak di modifikasi atau dihapus
+		test 					//folder untuk menjalankan testing / unitest
+		vendor 					//tempat menyimpan dependency //dependency dikelola di file composer.json //biasa diisi oleh composer saat menginstal aplikasi pihak ketiga
+		writable				//tidak untuk di modifikasi
+		composer.json			//composer
+		env						//template configurasi duplicate dulu lalu coppy menjadi ".env" untuk menjadi file system
+		//yang biasa diganti di dalam file env (Pagarnya Hapus dulu)
+			"CI_ENVIRONMENT = production" menjadi "CI_ENVIRONMENT = development" // ada 3 jenis : production, development, testing
+			"app.baseURL = ''" menjadi "app.baseURL = 'http://localhost:8080'"
+			dan databasenya
+		license.txt				//memberitahu lisensi codeigniter
+		phpunit.xml.dist		//untuk testing / unitest
+		

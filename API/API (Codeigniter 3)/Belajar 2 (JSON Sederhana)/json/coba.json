@@ -1,0 +1,34 @@
+[
+    { 
+        "nim" : "1218022",
+        "nama" : "Rayandra Wandi Marselana",
+        "umur" : 21,
+        "pekerjaan" : "Mahasiswa",
+        "lulus" : true,
+        "hobby" : [
+            "coding", 
+            "nonton", 
+            "sejarah"
+        ],
+        "pembimbing " : {
+            "pembimbing1" : "Rini",
+            "pembimbing2" : "Siti"
+        }
+    },
+    { 
+        "nim" : "1218022",
+        "nama" : "Rayandra Wandi",
+        "umur" : 21,
+        "pekerjaan" : "Mahasiswa",
+        "lulus" : true,
+        "hobby" : [
+            "coding", 
+            "nonton", 
+            "sejarah"
+        ],
+        "pembimbing " : {
+            "pembimbing1" : "Mina",
+            "pembimbing2" : "Siti"
+        }  
+    }
+]

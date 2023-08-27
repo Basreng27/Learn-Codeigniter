@@ -1,0 +1,57 @@
+//Object Literal
+//obeject javascript
+var  orang = {
+	nama : 'Rayandra Wandi Marselana',	//property
+	umur : 21, 			//property
+	pekerjaan : 'Mahasiswa'		//property
+	
+	sapa : funtion(){	//key "sapa" //value "funtion()
+		return 'Hi, nama saya ' + this.nama + ' usia saya ' + this.umur + 
+		' tahun , saya adalah seorang ' + this.pekerjaan; //method
+	}
+}
+
+//obeject JSON
+{ //pasangan key dan value "{"
+	"nama" : "Rayandra Wandi Marselana",	//key "nama" harus pakai kutip
+	"umur" : 21, 			//value "21" tergantung tipe data
+	"pekerjaan" : "Mahasiswa" 		
+}
+
+//membuat JSON sederhana
+//{ "key" : "value"} //key selalu dibungkus menggunakan kutip ""
+//tipe data dari value JSON
+	//boolean - true / false
+	//array - ["value", "value", ...] //bisa di isi object
+	//string - teks yang dibungkus menggunakan kutip ""
+	//object - { "key" : "value" }
+	//number - integer / float
+	//null - null
+	
+//tidak ada komentar pada JSON
+//format JSON yang valid
+{ 
+    "key" : "value" 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

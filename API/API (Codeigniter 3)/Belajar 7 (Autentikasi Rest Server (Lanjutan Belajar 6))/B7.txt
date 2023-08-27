@@ -1,0 +1,58 @@
+link nonton lebih komplit  https://www.youtube.com/watch?v=VGmHzSEf2Sk&list=PLJ_2_JcZ_v8ZoSePsWiWfEDQIDhX92m4A&index=8
+
+autentikasi = untuk membuat token API sendiri
+
+//langkah
+	buka folder config
+	setelah mengcopykan library rest nya maka akan muncul di folder config "rest.php"
+	kemudian cari "Rest API Keys Table"
+		$config['rest_keys_table'] = 'keys'; //'keys' default nama tabel untuk menampung/simpan ke dalam database -- bisa diganti sesuai keinginan
+	lalu enable kan
+		$config['rest_enable_keys'] = FALSE; //menjadi// $config['rest_enable_keys'] = true;
+	setelah di rubah menjadi true lalu coba buat tabel kedalam database dengan format sbb:
+		CREATE TABLE `keys` (
+		   `id` INT(11) NOT NULL AUTO_INCREMENT,
+		   `user_id` INT(11) NOT NULL,
+		   `key` VARCHAR(40) NOT NULL,
+		   `level` INT(2) NOT NULL,
+		   `ignore_limits` TINYINT(1) NOT NULL DEFAULT '0',
+		   `is_private_key` TINYINT(1)  NOT NULL DEFAULT '0',
+		   `ip_addresses` TEXT NULL DEFAULT NULL,
+		   `date_created` INT(11) NOT NULL,
+		   PRIMARY KEY (`id`)
+		) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+	lalu coba insert data baru kedalam tabel yang sudah dibuat:
+		INSERT INTO `keys` (`id`, `user_id`, `key`, `level`, `ignore_limits`, `is_private_key`, `ip_addresses`, `date_created`) VALUES ('1', '1', 'wpu123', '1', '0', '0', NULL, '1'); //kolom 'key' penting untuk dapat memiliki tokennya
+	cari "REST Enable Limits" //untuk memberikan limit kepada pengguna
+		$config['rest_enable_limits'] = false; //ubah menjadi// $config['rest_enable_limits'] = true;
+	setelah di rubah menjadi true lalu coba buat tabel kedalam database dengan format sbb:
+		CREATE TABLE `limits` (
+		   `id` INT(11) NOT NULL AUTO_INCREMENT,
+		   `uri` VARCHAR(255) NOT NULL,
+		   `count` INT(10) NOT NULL,
+		   `hour_started` INT(11) NOT NULL,
+		   `api_key` VARCHAR(40) NOT NULL,
+		   PRIMARY KEY (`id`)
+	   `) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+	copykan syntax
+		$this->methods['METHOD_NAME']['limit'] = [NUM_REQUESTS_PER_HOUR];
+	lalu pindahkan ke controller dan simpan ke dalam cinstruct__
+		$this->methods['METHOD_NAME']['limit'] = [NUM_REQUESTS_PER_HOUR]; //['METHOD_NAME'] = batasan permethod seperti get, put, delete, dll. ['limit'] = waktu perjam atau lain lain. [NUM_REQUESTS_PER_HOUR] = batasan akses di ganti jadi berapapun
+			contoh di rubah menjadi
+			$this->methods['index_get']['limit'] = 2;
+	lalu cari dan biarkan saja
+		$config['rest_keys_column'] = 'key';
+	cari "REST API Limits Method"
+		$config['rest_limits_method'] = 'ROUTED_URL'; //kalau seperti ini key nya tidak mempunyai limit
+	lalu cari
+		$config['rest_key_length'] = 40; //maksimum panjang key
+	lalu cari "REST API Key Variable"
+		$config['rest_key_name'] = 'X-API-KEY'; //!Penting! 'X-API-KEY' nama key bisa di sesuaikan// $config['rest_key_name'] = 'wpu-key';
+---	kemudian untuk rest login
+	cari "REST Login"
+		$config['rest_auth'] = 'basic'; bisa di isi menggunakan login tipe seperti basic(lebih mudah), digest, session
+	lalu cari "REST Source"
+		$config['auth_source'] = ''; //kosongkan saja
+	kemudian cari "REST Login Usernames"
+		$config['rest_valid_logins'] = ['admin' => '1234']; //username dan passwordnya, kalau mau conect ke database bisa baca panduannya
+		

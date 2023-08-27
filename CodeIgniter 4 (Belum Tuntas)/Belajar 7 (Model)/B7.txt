@@ -1,0 +1,4 @@
+link : https://www.youtube.com/watch?v=WvZ3fCd-GNU&list=PLFIM0718LjIUkkIq1Ub6B5dYNb6IlMvtc&index=8
+
+di .env nya ubah database sesuai dengan kebutuhan
+untuk get data 

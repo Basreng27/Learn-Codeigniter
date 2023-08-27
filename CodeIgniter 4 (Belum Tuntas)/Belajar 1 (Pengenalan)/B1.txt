@@ -1,0 +1,6 @@
+link : https://www.youtube.com/watch?v=Nt3YH68npW4&list=PLFIM0718LjIUkkIq1Ub6B5dYNb6IlMvtc&index=2
+
+required : 	PHP 7.2 ++
+			*intl* extensions & *mbstring* extensions
+			libcurl
+			MySQL 5.1 ++
